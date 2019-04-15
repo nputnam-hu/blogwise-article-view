@@ -1,5 +1,5 @@
 {
-  "name": "@jaebradley/example-rollup-react-component-npm-package",
+  "name": "@nputnam-hu/blogwise-article-view",
   "version": "0.0.0-development",
   "description": "Example React Component for npm Publication using Rollup",
   "main": "build/index.cjs.js",
@@ -28,7 +28,7 @@
     "url": "https://e61e5ccf3e85523b1db0bcafe3ef3edeb8557c2b:x-oauth-basic@github.com/nputnam-hu/blogwise-article-view.git"
   },
   "publishConfig": {
-    "access": "public"
+    "access": "private"
   },
   "keywords": [
     "rollup",
