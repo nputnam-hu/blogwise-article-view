@@ -42,9 +42,9 @@
   "author": "blogwise",
   "license": "MIT",
   "bugs": {
-    "url": "git+https://github.com/nputnam-hu/blogwise-article-view.git"
+    "url": "git+https://github.com/nputnam-hu/blogwise-article-view/issues"
   },
-  "homepage": "git+https://github.com/nputnam-hu/blogwise-article-view.git",
+  "homepage": "git+https://github.com/nputnam-hu/blogwise-article-view#readme",
   "dependencies": {
     "moment": "^2.24.0",
     "prop-types": "^15.6.1",

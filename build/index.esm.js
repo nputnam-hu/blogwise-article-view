@@ -1,4 +1,4 @@
-import 'react';
+import React from 'react';
 
 var commonjsGlobal = typeof window !== 'undefined' ? window : typeof global !== 'undefined' ? global : typeof self !== 'undefined' ? self : {};
 
@@ -4610,4 +4610,118 @@ var moment = createCommonjsModule(function (module, exports) {
 })));
 });
 
+var time = 'data:image/svg+xml;base64,UmVhY3QuY3JlYXRlRWxlbWVudCgKICAic3ZnIiwKICB7IHdpZHRoOiAiMjAiLCBoZWlnaHQ6ICIyMCIsIHZpZXdCb3g6ICIwIDAgMjAgMjAiLCBmaWxsOiAibm9uZSIsIHhtbG5zOiAiaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIH0sCiAgUmVhY3QuY3JlYXRlRWxlbWVudCgicGF0aCIsIHsgZDogIk0xNy4yODE1IDUuNDk0NThDMTYuMzMyNSAzLjI4MDg2IDE0LjcxOTkgMS42NzA4OSAxMi40ODg5IDAuNzE4ODY1QzExLjM3MzkgMC4yNDMwNDUgMTAuMjA1NiAwIDguOTg1MjEgMEM3Ljc2NDk3IDAgNi42MDUzOCAwLjI0MDc1IDUuNDkxNTYgMC43MTg4NjVDMy4yNzkwNiAxLjY2ODM2IDEuNjU5MjYgMy4yNzczIDAuNzA4NTg4IDUuNDk0NThDMC4yMzIyMDYgNi42MDU0MiAwIDcuNzY5MjEgMCA4Ljk5MDExQzAgMTAuMjExMyAwLjIzMjIwNiAxMS4zODQ3IDAuNzA4NTg4IDEyLjQ5NThDMS42NTkyNiAxNC43MTMgMy4yNzkyNiAxNi4zMzE2IDUuNDkxNTYgMTcuMjgxNEM2LjYwNTU5IDE3Ljc1OTUgNy43NjQ5NCAxOCA4Ljk4NTIxIDE4QzEwLjIwNTUgMTggMTEuMzczOSAxNy43NTcgMTIuNDg4NyAxNy4yODE0QzE0LjcxOTcgMTYuMzI5MyAxNi4zMzI0IDE0LjcwOTMgMTcuMjgxNiAxMi40OTU4QzE3Ljc1OTQgMTEuMzgxMSAxOCAxMC4yMTEzIDE4IDguOTkwMTFDMTggNy43NjkyMSAxNy43NTk2IDYuNjA5MTkgMTcuMjgxNSA1LjQ5NDU4Wk0xNS44NDQ4IDEyLjk2ODRDMTUuMTM4MyAxNC4xODA3IDE0LjE3MDQgMTUuMTQyNSAxMi45NTE0IDE1Ljg1MzVDMTEuNzM5OCAxNi41NjA0IDEwLjQxMjMgMTYuOTE2OSA4Ljk4NTQxIDE2LjkxNjlDNy45MTI3NiAxNi45MTY5IDYuODg5MjQgMTYuNzEwMiA1LjkxNDgyIDE2LjI4NjdDNC45NDA0NCAxNS44NjM0IDQuMDk5MTUgMTUuMzA2OSAzLjM5NTM4IDE0LjYwM0MyLjY5MTYyIDEzLjg5ODggMi4xMzE0NyAxMy4wNDg5IDEuNzEyNjIgMTIuMDcyM0MxLjI5NSAxMS4wOTkyIDEuMDkyNjIgMTAuMDYzNiAxLjA5MjYyIDguOTkwMTRDMS4wOTI2MiA3LjU2MjMgMS40NDMyNCA2LjI0MDc1IDIuMTQ1NzYgNS4wMzE4MkMyLjg1MDc5IDMuODE4NDggMy44MTg4OCAyLjg1NTcxIDUuMDI5MjYgMi4xNDY3MUM2LjIzOTQ0IDEuNDM3NzMgNy41NTgzOCAxLjA4MzEyIDguOTg1MjEgMS4wODMxMkMxMC40MTIzIDEuMDgzMTIgMTEuNzM5NiAxLjQzOTgyIDEyLjk1MTIgMi4xNDY3MUMxNC4xNzAyIDIuODU3OCAxNS4xMzYgMy44MjA1NCAxNS44NDQ2IDUuMDMxNzlDMTYuNTUzMiA2LjI0Mjg0IDE2LjkwNzQgNy41NjIzIDE2LjkwNzQgOC45OTAxMUMxNi45MDc0IDEwLjQxOCAxNi41NTU1IDExLjc0ODUgMTUuODQ0OCAxMi45Njg0WiIsIHRyYW5zZm9ybTogInRyYW5zbGF0ZSgxIDEpIiwgZmlsbDogIiM4MjgyODIiLCBzdHJva2U6ICIjODI4MjgyIiwgInN0cm9rZS13aWR0aCI6ICIwLjUiIH0pLAogIFJlYWN0LmNyZWF0ZUVsZW1lbnQoInBhdGgiLCB7IGQ6ICJNMS4xMTIxNSA1LjY1MjEzVjAuNTUxNDJDMS4xMTIxNSAwLjI0NjE5NCAwLjg0NjM1MyAtNy4wMDQ5NGUtMDggMC41NDEyNjUgLTcuMDA0OTRlLTA4QzAuMjU1OTQxIC03LjAwNDk0ZS0wOCAtMy44MDU3MmUtMDcgMC4yNDYxOTQgLTMuODA1NzJlLTA3IDAuNTUxNDJWNS43MzA4OEMtMy44MDU3MmUtMDcgNS43NDA3NyAwLjAxOTczNTUgNS43ODAyNiAwLjAxOTczNTUgNS44MDk2OUMyLjIyNjQxZS0wNyA1Ljk4Njk2IDAuMDQ5MzUyNiA2LjEzNDY2IDAuMTY3MzUzIDYuMjUyOTNMMy4xMTAwOSA5LjE5NzA4QzMuMzA3IDkuMzk0MSAzLjY3MTA2IDkuMzk0MSAzLjg2NzgyIDkuMTk3MDhDNC4wOTQxMiA4Ljk3MDYzIDQuMDc5MjQgOC42NDIwNyAzLjg2NzgyIDguNDI5MDRMMS4xMTIxNSA1LjY1MjEzWiIsIHRyYW5zZm9ybTogInRyYW5zbGF0ZSg5LjQ0Mzg1IDQuMjU5MjIpIiwgZmlsbDogIiM4MjgyODIiLCBzdHJva2U6ICIjODI4MjgyIiwgInN0cm9rZS13aWR0aCI6ICIwLjUiIH0pCik7';
+
 /* eslint import/extensions: 0 */
+
+var genText = function genText(date) {
+  var m = moment(date);
+  var now = moment();
+  var daysBetween = moment.duration(now.diff(m)).asDays();
+  var roundedDays = Math.floor(daysBetween);
+  if (roundedDays === 0) return 'a couple of hours ago';
+  if (roundedDays < 30) {
+    return roundedDays + ' ' + (roundedDays === 1 ? 'day' : 'days') + ' ago';
+  }
+  var roundedMonths = Math.floor(daysBetween / 30);
+  if (roundedMonths < 12) {
+    return roundedMonths + ' ' + (roundedMonths === 1 ? 'month' : 'months') + ' ago';
+  }
+  var roundedYears = Math.floor(daysBetween / 365);
+  return roundedYears + ' ' + (roundedYears === 1 ? 'year' : 'years') + ' ago';
+};
+
+var Time = function Time(_ref) {
+  var date = _ref.date;
+  return React.createElement(
+    'div',
+    { className: 'time-container' },
+    React.createElement('img', { alt: date.toString(), src: time }),
+    React.createElement(
+      'span',
+      { className: 'time-text', style: { fontSize: '16px' } },
+      genText(date)
+    )
+  );
+};
+
+var PostView = function PostView(_ref2) {
+  var title = _ref2.title,
+      coverPhotoUri = _ref2.coverPhotoUri,
+      description = _ref2.description,
+      htmlBody = _ref2.htmlBody,
+      tags = _ref2.tags,
+      publishDate = _ref2.publishDate,
+      author = _ref2.author;
+  return React.createElement(
+    'div',
+    { className: 'postpreview' },
+    !title && !coverPhotoUri && !description && !htmlBody && !tags.length && !publishDate && !author && React.createElement(
+      'h1',
+      { style: { textAlign: 'center', marginTop: '60px' } },
+      'Preview Will Appear Here'
+    ),
+    React.createElement(
+      'div',
+      { className: 'article' },
+      React.createElement(
+        'h1',
+        { id: 'article-title' },
+        title
+      ),
+      React.createElement(
+        'div',
+        { className: 'author' },
+        author && React.createElement('img', {
+          className: 'authorimg',
+          alt: author.name,
+          src: author.headshotUri
+        }),
+        React.createElement(
+          'div',
+          { className: 'authorinfo' },
+          author && React.createElement(
+            'div',
+            { className: 'article-authorname' },
+            author.name
+          ),
+          publishDate && React.createElement(Time, { size: 'large', date: publishDate })
+        )
+      ),
+      React.createElement('br', null),
+      React.createElement(
+        'i',
+        null,
+        React.createElement('div', {
+          className: 'bodytext',
+          dangerouslySetInnerHTML: { __html: description }
+        })
+      ),
+      React.createElement('br', null),
+      coverPhotoUri && React.createElement('img', { src: coverPhotoUri, alt: 'Article Cover' }),
+      React.createElement('br', null),
+      React.createElement('br', null),
+      React.createElement('div', {
+        className: 'bodytext ql-editor',
+        dangerouslySetInnerHTML: { __html: htmlBody }
+      }),
+      tags && tags.length > 0 ? React.createElement(
+        'div',
+        { style: { marginTop: '3rem' } },
+        React.createElement(
+          'ul',
+          { className: 'taglist' },
+          tags.map(function (tag) {
+            return React.createElement(
+              'li',
+              { key: tag + 'tag' },
+              tag
+            );
+          })
+        )
+      ) : null
+    )
+  );
+};
+
+export default PostView;
