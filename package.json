@@ -1,6 +1,6 @@
 {
   "name": "blogwise-article-view",
-  "version": "0.0.0-development",
+  "version": "1.0.0",
   "description": "Example React Component for npm Publication using Rollup",
   "main": "build/index.cjs.js",
   "module": "build/index.esm.js",

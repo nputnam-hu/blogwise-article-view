@@ -17,12 +17,12 @@ const config = {
     {
       file: pkg.browser,
       format: 'umd',
-      name: 'Example',
+      name: 'blogwise-article-view',
     },
     {
       file: pkg.main,
       format: 'cjs',
-      name: 'Example',
+      name: 'blogwise-article-view',
     },
     {
       file: pkg.module,
