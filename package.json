@@ -25,7 +25,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://e61e5ccf3e85523b1db0bcafe3ef3edeb8557c2b:x-oauth-basic@github.com/nputnam-hu/blogwise-article-view.git"
+    "url": "git+https://github.com/nputnam-hu/blogwise-article-view.git"
   },
   "publishConfig": {
     "access": "private"
@@ -42,9 +42,9 @@
   "author": "blogwise",
   "license": "MIT",
   "bugs": {
-    "url": "https://e61e5ccf3e85523b1db0bcafe3ef3edeb8557c2b:x-oauth-basic@github.com/nputnam-hu/blogwise-article-view.git"
+    "url": "git+https://github.com/nputnam-hu/blogwise-article-view.git"
   },
-  "homepage": "https://e61e5ccf3e85523b1db0bcafe3ef3edeb8557c2b:x-oauth-basic@github.com/nputnam-hu/blogwise-article-view.git",
+  "homepage": "git+https://github.com/nputnam-hu/blogwise-article-view.git",
   "dependencies": {
     "moment": "^2.24.0",
     "prop-types": "^15.6.1",
