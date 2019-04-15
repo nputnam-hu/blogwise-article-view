@@ -1,5 +1,5 @@
 {
-  "name": "@nputnam-hu/blogwise-article-view",
+  "name": "blogwise-article-view",
   "version": "0.0.0-development",
   "description": "Example React Component for npm Publication using Rollup",
   "main": "build/index.cjs.js",
@@ -39,7 +39,7 @@
     "example react component",
     "example rollup react component"
   ],
-  "author": "jae.b.bradley@gmail.com",
+  "author": "blogwise",
   "license": "MIT",
   "bugs": {
     "url": "https://e61e5ccf3e85523b1db0bcafe3ef3edeb8557c2b:x-oauth-basic@github.com/nputnam-hu/blogwise-article-view.git"
