@@ -4616,8 +4616,6 @@
 	})));
 	});
 
-	var img = new Image();img.src = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHZpZXdCb3g9IjAgMCAyMCAyMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTE3LjI4MTUgNS40OTQ1OEMxNi4zMzI1IDMuMjgwODYgMTQuNzE5OSAxLjY3MDg5IDEyLjQ4ODkgMC43MTg4NjVDMTEuMzczOSAwLjI0MzA0NSAxMC4yMDU2IDAgOC45ODUyMSAwQzcuNzY0OTcgMCA2LjYwNTM4IDAuMjQwNzUgNS40OTE1NiAwLjcxODg2NUMzLjI3OTA2IDEuNjY4MzYgMS42NTkyNiAzLjI3NzMgMC43MDg1ODggNS40OTQ1OEMwLjIzMjIwNiA2LjYwNTQyIDAgNy43NjkyMSAwIDguOTkwMTFDMCAxMC4yMTEzIDAuMjMyMjA2IDExLjM4NDcgMC43MDg1ODggMTIuNDk1OEMxLjY1OTI2IDE0LjcxMyAzLjI3OTI2IDE2LjMzMTYgNS40OTE1NiAxNy4yODE0QzYuNjA1NTkgMTcuNzU5NSA3Ljc2NDk0IDE4IDguOTg1MjEgMThDMTAuMjA1NSAxOCAxMS4zNzM5IDE3Ljc1NyAxMi40ODg3IDE3LjI4MTRDMTQuNzE5NyAxNi4zMjkzIDE2LjMzMjQgMTQuNzA5MyAxNy4yODE2IDEyLjQ5NThDMTcuNzU5NCAxMS4zODExIDE4IDEwLjIxMTMgMTggOC45OTAxMUMxOCA3Ljc2OTIxIDE3Ljc1OTYgNi42MDkxOSAxNy4yODE1IDUuNDk0NThaTTE1Ljg0NDggMTIuOTY4NEMxNS4xMzgzIDE0LjE4MDcgMTQuMTcwNCAxNS4xNDI1IDEyLjk1MTQgMTUuODUzNUMxMS43Mzk4IDE2LjU2MDQgMTAuNDEyMyAxNi45MTY5IDguOTg1NDEgMTYuOTE2OUM3LjkxMjc2IDE2LjkxNjkgNi44ODkyNCAxNi43MTAyIDUuOTE0ODIgMTYuMjg2N0M0Ljk0MDQ0IDE1Ljg2MzQgNC4wOTkxNSAxNS4zMDY5IDMuMzk1MzggMTQuNjAzQzIuNjkxNjIgMTMuODk4OCAyLjEzMTQ3IDEzLjA0ODkgMS43MTI2MiAxMi4wNzIzQzEuMjk1IDExLjA5OTIgMS4wOTI2MiAxMC4wNjM2IDEuMDkyNjIgOC45OTAxNEMxLjA5MjYyIDcuNTYyMyAxLjQ0MzI0IDYuMjQwNzUgMi4xNDU3NiA1LjAzMTgyQzIuODUwNzkgMy44MTg0OCAzLjgxODg4IDIuODU1NzEgNS4wMjkyNiAyLjE0NjcxQzYuMjM5NDQgMS40Mzc3MyA3LjU1ODM4IDEuMDgzMTIgOC45ODUyMSAxLjA4MzEyQzEwLjQxMjMgMS4wODMxMiAxMS43Mzk2IDEuNDM5ODIgMTIuOTUxMiAyLjE0NjcxQzE0LjE3MDIgMi44NTc4IDE1LjEzNiAzLjgyMDU0IDE1Ljg0NDYgNS4wMzE3OUMxNi41NTMyIDYuMjQyODQgMTYuOTA3NCA3LjU2MjMgMTYuOTA3NCA4Ljk5MDExQzE2LjkwNzQgMTAuNDE4IDE2LjU1NTUgMTEuNzQ4NSAxNS44NDQ4IDEyLjk2ODRaIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgxIDEpIiBmaWxsPSIjODI4MjgyIiBzdHJva2U9IiM4MjgyODIiIHN0cm9rZS13aWR0aD0iMC41Ii8+CjxwYXRoIGQ9Ik0xLjExMjE1IDUuNjUyMTNWMC41NTE0MkMxLjExMjE1IDAuMjQ2MTk0IDAuODQ2MzUzIC03LjAwNDk0ZS0wOCAwLjU0MTI2NSAtNy4wMDQ5NGUtMDhDMC4yNTU5NDEgLTcuMDA0OTRlLTA4IC0zLjgwNTcyZS0wNyAwLjI0NjE5NCAtMy44MDU3MmUtMDcgMC41NTE0MlY1LjczMDg4Qy0zLjgwNTcyZS0wNyA1Ljc0MDc3IDAuMDE5NzM1NSA1Ljc4MDI2IDAuMDE5NzM1NSA1LjgwOTY5QzIuMjI2NDFlLTA3IDUuOTg2OTYgMC4wNDkzNTI2IDYuMTM0NjYgMC4xNjczNTMgNi4yNTI5M0wzLjExMDA5IDkuMTk3MDhDMy4zMDcgOS4zOTQxIDMuNjcxMDYgOS4zOTQxIDMuODY3ODIgOS4xOTcwOEM0LjA5NDEyIDguOTcwNjMgNC4wNzkyNCA4LjY0MjA3IDMuODY3ODIgOC40MjkwNEwxLjExMjE1IDUuNjUyMTNaIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSg5LjQ0Mzg1IDQuMjU5MjIpIiBmaWxsPSIjODI4MjgyIiBzdHJva2U9IiM4MjgyODIiIHN0cm9rZS13aWR0aD0iMC41Ii8+Cjwvc3ZnPgo=';
-
 	function styleInject(css, ref) {
 	  if ( ref === void 0 ) ref = {};
 	  var insertAt = ref.insertAt;
@@ -4668,11 +4666,12 @@
 	};
 
 	var Time = function Time(_ref) {
-	  var date = _ref.date;
+	  var date = _ref.date,
+	      timeIcon = _ref.timeIcon;
 	  return React.createElement(
 	    'div',
 	    { className: 'time-container' },
-	    React.createElement('img', { alt: date.toString(), src: img }),
+	    React.createElement('img', { alt: date.toString(), src: timeIcon }),
 	    React.createElement(
 	      'span',
 	      { className: 'time-text', style: { fontSize: '16px' } },
@@ -4688,7 +4687,8 @@
 	      htmlBody = _ref2.htmlBody,
 	      tags = _ref2.tags,
 	      publishDate = _ref2.publishDate,
-	      author = _ref2.author;
+	      author = _ref2.author,
+	      timeIcon = _ref2.timeIcon;
 	  return React.createElement(
 	    'div',
 	    { className: 'postpreview' },
@@ -4721,7 +4721,7 @@
 	            { className: 'article-authorname' },
 	            author.name
 	          ),
-	          publishDate && React.createElement(Time, { size: 'large', date: publishDate })
+	          publishDate && React.createElement(Time, { size: 'large', date: publishDate, timeIcon: timeIcon })
 	        )
 	      ),
 	      React.createElement('br', null),
