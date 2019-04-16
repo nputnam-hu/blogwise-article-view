@@ -2,12 +2,13 @@
   "name": "blogwise-article-view",
   "version": "1.0.0",
   "description": "Example React Component for npm Publication using Rollup",
-  "main": "src/index.js",
+  "main": "build/index.cjs.js",
   "module": "build/index.esm.js",
   "browser": "build/index.js",
   "style": "build/index.css",
   "files": [
-    "build", "src"
+    "build",
+    "src"
   ],
   "scripts": {
     "build": "rollup -c",
@@ -50,6 +51,8 @@
     "prop-types": "^15.6.1",
     "react": "^16.3.1",
     "react-dom": "^16.3.1",
+    "rollup-plugin-image": "^1.0.2",
+    "rollup-plugin-img": "^1.1.0",
     "rollup-plugin-sass": "^1.2.2",
     "rollup-plugin-svg": "^1.0.1"
   },

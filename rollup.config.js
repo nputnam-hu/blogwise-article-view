@@ -6,9 +6,7 @@ import postcss from 'rollup-plugin-postcss'
 import filesize from 'rollup-plugin-filesize'
 import autoprefixer from 'autoprefixer'
 import localResolve from 'rollup-plugin-local-resolve'
-// import sass from 'rollup-plugin-sass'
-import svg from 'rollup-plugin-svg'
-
+import image from 'rollup-plugin-image'
 import pkg from './package.json'
 
 const config = {
@@ -38,8 +36,7 @@ const config = {
     resolve(),
     commonjs(),
     filesize(),
-    // sass({ insert: true }),
-    svg(),
+    image(),
   ],
 }
 
