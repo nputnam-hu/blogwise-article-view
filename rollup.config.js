@@ -32,7 +32,7 @@ const config = {
   external: ['react', 'react-dom'],
   plugins: [
     peerDepsExternal(),
-    postcss({ extract: true, plugins: [autoprefixer] }),
+    postcss({ extract: false, plugins: [autoprefixer], extensions: ['.css'] }),
     babel({ exclude: 'node_modules/**' }),
     localResolve(),
     resolve(),

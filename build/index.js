@@ -4618,6 +4618,36 @@
 
 	var time = 'data:image/svg+xml;base64,UmVhY3QuY3JlYXRlRWxlbWVudCgKICAic3ZnIiwKICB7IHdpZHRoOiAiMjAiLCBoZWlnaHQ6ICIyMCIsIHZpZXdCb3g6ICIwIDAgMjAgMjAiLCBmaWxsOiAibm9uZSIsIHhtbG5zOiAiaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIH0sCiAgUmVhY3QuY3JlYXRlRWxlbWVudCgicGF0aCIsIHsgZDogIk0xNy4yODE1IDUuNDk0NThDMTYuMzMyNSAzLjI4MDg2IDE0LjcxOTkgMS42NzA4OSAxMi40ODg5IDAuNzE4ODY1QzExLjM3MzkgMC4yNDMwNDUgMTAuMjA1NiAwIDguOTg1MjEgMEM3Ljc2NDk3IDAgNi42MDUzOCAwLjI0MDc1IDUuNDkxNTYgMC43MTg4NjVDMy4yNzkwNiAxLjY2ODM2IDEuNjU5MjYgMy4yNzczIDAuNzA4NTg4IDUuNDk0NThDMC4yMzIyMDYgNi42MDU0MiAwIDcuNzY5MjEgMCA4Ljk5MDExQzAgMTAuMjExMyAwLjIzMjIwNiAxMS4zODQ3IDAuNzA4NTg4IDEyLjQ5NThDMS42NTkyNiAxNC43MTMgMy4yNzkyNiAxNi4zMzE2IDUuNDkxNTYgMTcuMjgxNEM2LjYwNTU5IDE3Ljc1OTUgNy43NjQ5NCAxOCA4Ljk4NTIxIDE4QzEwLjIwNTUgMTggMTEuMzczOSAxNy43NTcgMTIuNDg4NyAxNy4yODE0QzE0LjcxOTcgMTYuMzI5MyAxNi4zMzI0IDE0LjcwOTMgMTcuMjgxNiAxMi40OTU4QzE3Ljc1OTQgMTEuMzgxMSAxOCAxMC4yMTEzIDE4IDguOTkwMTFDMTggNy43NjkyMSAxNy43NTk2IDYuNjA5MTkgMTcuMjgxNSA1LjQ5NDU4Wk0xNS44NDQ4IDEyLjk2ODRDMTUuMTM4MyAxNC4xODA3IDE0LjE3MDQgMTUuMTQyNSAxMi45NTE0IDE1Ljg1MzVDMTEuNzM5OCAxNi41NjA0IDEwLjQxMjMgMTYuOTE2OSA4Ljk4NTQxIDE2LjkxNjlDNy45MTI3NiAxNi45MTY5IDYuODg5MjQgMTYuNzEwMiA1LjkxNDgyIDE2LjI4NjdDNC45NDA0NCAxNS44NjM0IDQuMDk5MTUgMTUuMzA2OSAzLjM5NTM4IDE0LjYwM0MyLjY5MTYyIDEzLjg5ODggMi4xMzE0NyAxMy4wNDg5IDEuNzEyNjIgMTIuMDcyM0MxLjI5NSAxMS4wOTkyIDEuMDkyNjIgMTAuMDYzNiAxLjA5MjYyIDguOTkwMTRDMS4wOTI2MiA3LjU2MjMgMS40NDMyNCA2LjI0MDc1IDIuMTQ1NzYgNS4wMzE4MkMyLjg1MDc5IDMuODE4NDggMy44MTg4OCAyLjg1NTcxIDUuMDI5MjYgMi4xNDY3MUM2LjIzOTQ0IDEuNDM3NzMgNy41NTgzOCAxLjA4MzEyIDguOTg1MjEgMS4wODMxMkMxMC40MTIzIDEuMDgzMTIgMTEuNzM5NiAxLjQzOTgyIDEyLjk1MTIgMi4xNDY3MUMxNC4xNzAyIDIuODU3OCAxNS4xMzYgMy44MjA1NCAxNS44NDQ2IDUuMDMxNzlDMTYuNTUzMiA2LjI0Mjg0IDE2LjkwNzQgNy41NjIzIDE2LjkwNzQgOC45OTAxMUMxNi45MDc0IDEwLjQxOCAxNi41NTU1IDExLjc0ODUgMTUuODQ0OCAxMi45Njg0WiIsIHRyYW5zZm9ybTogInRyYW5zbGF0ZSgxIDEpIiwgZmlsbDogIiM4MjgyODIiLCBzdHJva2U6ICIjODI4MjgyIiwgInN0cm9rZS13aWR0aCI6ICIwLjUiIH0pLAogIFJlYWN0LmNyZWF0ZUVsZW1lbnQoInBhdGgiLCB7IGQ6ICJNMS4xMTIxNSA1LjY1MjEzVjAuNTUxNDJDMS4xMTIxNSAwLjI0NjE5NCAwLjg0NjM1MyAtNy4wMDQ5NGUtMDggMC41NDEyNjUgLTcuMDA0OTRlLTA4QzAuMjU1OTQxIC03LjAwNDk0ZS0wOCAtMy44MDU3MmUtMDcgMC4yNDYxOTQgLTMuODA1NzJlLTA3IDAuNTUxNDJWNS43MzA4OEMtMy44MDU3MmUtMDcgNS43NDA3NyAwLjAxOTczNTUgNS43ODAyNiAwLjAxOTczNTUgNS44MDk2OUMyLjIyNjQxZS0wNyA1Ljk4Njk2IDAuMDQ5MzUyNiA2LjEzNDY2IDAuMTY3MzUzIDYuMjUyOTNMMy4xMTAwOSA5LjE5NzA4QzMuMzA3IDkuMzk0MSAzLjY3MTA2IDkuMzk0MSAzLjg2NzgyIDkuMTk3MDhDNC4wOTQxMiA4Ljk3MDYzIDQuMDc5MjQgOC42NDIwNyAzLjg2NzgyIDguNDI5MDRMMS4xMTIxNSA1LjY1MjEzWiIsIHRyYW5zZm9ybTogInRyYW5zbGF0ZSg5LjQ0Mzg1IDQuMjU5MjIpIiwgZmlsbDogIiM4MjgyODIiLCBzdHJva2U6ICIjODI4MjgyIiwgInN0cm9rZS13aWR0aCI6ICIwLjUiIH0pCik7';
 
+	function styleInject(css, ref) {
+	  if ( ref === void 0 ) ref = {};
+	  var insertAt = ref.insertAt;
+
+	  if (!css || typeof document === 'undefined') { return; }
+
+	  var head = document.head || document.getElementsByTagName('head')[0];
+	  var style = document.createElement('style');
+	  style.type = 'text/css';
+
+	  if (insertAt === 'top') {
+	    if (head.firstChild) {
+	      head.insertBefore(style, head.firstChild);
+	    } else {
+	      head.appendChild(style);
+	    }
+	  } else {
+	    head.appendChild(style);
+	  }
+
+	  if (style.styleSheet) {
+	    style.styleSheet.cssText = css;
+	  } else {
+	    style.appendChild(document.createTextNode(css));
+	  }
+	}
+
+	var css = ".postpreview {\n  overflow: scroll;\n  margin-left: 40px;\n  width: 48vw;\n  position: -webkit-sticky;\n  position: sticky;\n  top: 0;\n  height: 100vh; }\n  .postpreview .article {\n    display: flex;\n    flex-direction: column; }\n  .postpreview #article-title {\n    font-family: futura-pt, sans-serif;\n    font-size: 45px;\n    font-weight: 300;\n    color: #333333; }\n  .postpreview .author {\n    display: flex;\n    flex-direction: row;\n    align-self: flex-start; }\n  .postpreview .authorimg {\n    align-self: flex-start;\n    margin-right: 10px;\n    height: 50px;\n    width: 50px;\n    border-radius: 40px; }\n  .postpreview img {\n    display: block;\n    margin: auto;\n    max-width: 500px; }\n  .postpreview .authorinfo {\n    padding-left: 5px;\n    display: flex;\n    flex-direction: column; }\n  .postpreview .article-authorname {\n    font-family: futura-pt, sans-serif;\n    font-size: 18px;\n    padding-top: 2px;\n    padding-bottom: 2px; }\n  .postpreview .bodytext {\n    font-family: Rubik;\n    font-size: 20px;\n    font-weight: 300;\n    line-height: 30px;\n    display: flex;\n    flex-direction: column; }\n    .postpreview .bodytext code {\n      font-size: 14px; }\n  .postpreview .taglist {\n    list-style: none;\n    padding-left: 0px;\n    padding-bottom: 10px;\n    display: flex;\n    flex-wrap: wrap;\n    flex-direction: row; }\n    .postpreview .taglist li {\n      display: flex;\n      height: 35px;\n      border-radius: 1px;\n      padding-right: 15px;\n      padding-left: 15px;\n      margin: 10px 13px 0px 0;\n      background: #ebe9e7;\n      align-items: center;\n      justify-content: center;\n      font-family: futura-pt, sans-serif;\n      font-weight: 300;\n      font-size: 18px; }\n    .postpreview .taglist a {\n      text-decoration: none;\n      color: black; }\n    .postpreview .taglist li:hover {\n      background: #e0e0e0; }\n\n.time-container {\n  padding-top: 1px;\n  display: flex;\n  align-items: left; }\n  .time-container .time-text {\n    text-align: center;\n    padding-left: 4px;\n    font-family: 'Assistant Regular';\n    color: #828282; }\n";
+	styleInject(css);
+
 	/* eslint import/extensions: 0 */
 
 	var genText = function genText(date) {
