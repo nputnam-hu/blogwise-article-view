@@ -2,12 +2,12 @@
   "name": "blogwise-article-view",
   "version": "1.0.0",
   "description": "Example React Component for npm Publication using Rollup",
-  "main": "build/index.cjs.js",
+  "main": "src/index.js",
   "module": "build/index.esm.js",
   "browser": "build/index.js",
   "style": "build/index.css",
   "files": [
-    "build"
+    "build", "src"
   ],
   "scripts": {
     "build": "rollup -c",
