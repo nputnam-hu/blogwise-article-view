@@ -3,6 +3,7 @@
 import React from 'react'
 import moment from 'moment'
 import './styles.sass'
+import Clock from './time.js'
 
 const genText = function genText(date) {
   const m = moment(date)
@@ -21,9 +22,9 @@ const genText = function genText(date) {
   return `${roundedYears} ${roundedYears === 1 ? 'year' : 'years'} ago`
 }
 
-const Time = ({ date, timeIcon }) => (
+const Time = ({ date }) => (
   <div className="time-container">
-    <img alt={date.toString()} src={timeIcon} />
+    <Clock />
     <span className="time-text" style={{ fontSize: '16px' }}>
       {genText(date)}
     </span>
@@ -38,7 +39,6 @@ const PostView = ({
   tags,
   publishDate,
   author,
-  timeIcon,
 }) => (
   <div className="postpreview">
     {!title &&
@@ -64,9 +64,7 @@ const PostView = ({
         )}
         <div className="authorinfo">
           {author && <div className="article-authorname">{author.name}</div>}
-          {publishDate && (
-            <Time size="large" date={publishDate} timeIcon={timeIcon} />
-          )}
+          {publishDate && <Time size="large" date={publishDate} />}
         </div>
       </div>
       <br />
