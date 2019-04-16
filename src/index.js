@@ -1,3 +1,3 @@
-import Template1 from './template1'
+import Template1 from './Template1'
 
 export { Template1 }
