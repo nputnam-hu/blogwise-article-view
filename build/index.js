@@ -5104,8 +5104,9 @@
 	        coverPhoto && !isPreview && React__default.createElement(Img, { fluid: coverPhoto.childImageSharp.fluid, alt: 'Cover Photo' }),
 	        coverPhoto && isPreview && React__default.createElement('img', { src: coverPhoto, alt: 'Cover Photo' }),
 	        React__default.createElement(PostContent
-	        // className={`${styles.BlogPost__content} ${styles.bodytext}`}
-	        , { content: htmlBody
+	        // className={`${styles.BlogPost__content} ${styles.bodytext} ql-editor`}
+	        , { className: 'ql-editor',
+	          content: htmlBody
 	        }),
 	        tags && tags.length > 0 && React__default.createElement(
 	          'div',

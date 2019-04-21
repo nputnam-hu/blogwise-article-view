@@ -5098,8 +5098,9 @@ var BlogPostTemplate = function (_Component) {
         coverPhoto && !isPreview && React.createElement(Img, { fluid: coverPhoto.childImageSharp.fluid, alt: 'Cover Photo' }),
         coverPhoto && isPreview && React.createElement('img', { src: coverPhoto, alt: 'Cover Photo' }),
         React.createElement(PostContent
-        // className={`${styles.BlogPost__content} ${styles.bodytext}`}
-        , { content: htmlBody
+        // className={`${styles.BlogPost__content} ${styles.bodytext} ql-editor`}
+        , { className: 'ql-editor',
+          content: htmlBody
         }),
         tags && tags.length > 0 && React.createElement(
           'div',
