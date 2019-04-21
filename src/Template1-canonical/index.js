@@ -113,7 +113,7 @@ class BlogPostTemplate extends Component {
         {coverPhoto && isPreview && <img src={coverPhoto} alt="Cover Photo" />}
         {/* Post Content Section */}
         <PostContent
-          className={`${styles.BlogPost__content} ${styles.bodytext}`}
+          // className={`${styles.BlogPost__content} ${styles.bodytext}`}
           content={htmlBody}
         />
         {/* Tags Section */}
