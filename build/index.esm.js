@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 
 var commonjsGlobal = typeof window !== 'undefined' ? window : typeof global !== 'undefined' ? global : typeof self !== 'undefined' ? self : {};
 
@@ -4637,7 +4637,7 @@ function styleInject(css, ref) {
   }
 }
 
-var css = ".postpreview {\n  overflow: scroll;\n  margin-left: 40px;\n  width: 48vw;\n  position: -webkit-sticky;\n  position: sticky;\n  top: 0;\n  height: 100vh; }\n  .postpreview .article {\n    display: flex;\n    flex-direction: column; }\n  .postpreview #article-title {\n    font-family: futura-pt, sans-serif;\n    font-size: 45px;\n    font-weight: 300;\n    color: #333333; }\n  .postpreview .author {\n    display: flex;\n    flex-direction: row;\n    align-self: flex-start; }\n  .postpreview .authorimg {\n    align-self: flex-start;\n    margin-right: 10px;\n    height: 50px;\n    width: 50px;\n    border-radius: 40px; }\n  .postpreview img {\n    display: block;\n    margin: auto;\n    max-width: 500px; }\n  .postpreview .authorinfo {\n    padding-left: 5px;\n    display: flex;\n    flex-direction: column; }\n  .postpreview .article-authorname {\n    font-family: futura-pt, sans-serif;\n    font-size: 18px;\n    padding-top: 2px;\n    padding-bottom: 2px; }\n  .postpreview .bodytext {\n    font-family: Rubik;\n    font-size: 20px;\n    font-weight: 300;\n    line-height: 30px;\n    display: flex;\n    flex-direction: column; }\n    .postpreview .bodytext code {\n      font-size: 14px; }\n  .postpreview .ql-video {\n    height: 30vw; }\n  .postpreview .taglist {\n    list-style: none;\n    padding-left: 0px;\n    padding-bottom: 10px;\n    display: flex;\n    flex-wrap: wrap;\n    flex-direction: row; }\n    .postpreview .taglist li {\n      display: flex;\n      height: 35px;\n      border-radius: 1px;\n      padding-right: 15px;\n      padding-left: 15px;\n      margin: 10px 13px 0px 0;\n      background: #ebe9e7;\n      align-items: center;\n      justify-content: center;\n      font-family: futura-pt, sans-serif;\n      font-weight: 300;\n      font-size: 18px; }\n    .postpreview .taglist a {\n      text-decoration: none;\n      color: black; }\n    .postpreview .taglist li:hover {\n      background: #e0e0e0; }\n\n.time-container {\n  padding-top: 1px;\n  display: flex;\n  align-items: left; }\n  .time-container .time-text {\n    text-align: center;\n    padding-left: 4px;\n    font-family: 'Assistant Regular';\n    color: #828282; }\n";
+var css = ".postpreview {\n  margin-left: 40px;\n  width: 100%;\n  position: -webkit-sticky;\n  position: sticky;\n  top: 0;\n  height: 100vh; }\n  .postpreview .article {\n    display: flex;\n    flex-direction: column; }\n  .postpreview #article-title {\n    font-family: futura-pt, sans-serif;\n    font-size: 45px;\n    font-weight: 300;\n    color: #333333; }\n  .postpreview .author {\n    display: flex;\n    flex-direction: row;\n    align-self: flex-start; }\n  .postpreview .authorimg {\n    align-self: flex-start;\n    margin-right: 10px;\n    height: 50px;\n    width: 50px;\n    border-radius: 40px; }\n  .postpreview img {\n    display: block;\n    margin: auto;\n    max-width: 500px; }\n  .postpreview .authorinfo {\n    padding-left: 5px;\n    display: flex;\n    flex-direction: column; }\n  .postpreview .article-authorname {\n    font-family: futura-pt, sans-serif;\n    font-size: 18px;\n    padding-top: 2px;\n    padding-bottom: 2px; }\n  .postpreview .bodytext {\n    font-family: Rubik;\n    font-size: 20px;\n    font-weight: 300;\n    line-height: 30px;\n    display: flex;\n    flex-direction: column; }\n    .postpreview .bodytext code {\n      font-size: 14px; }\n  .postpreview .ql-video {\n    height: 30vw; }\n  .postpreview .taglist {\n    list-style: none;\n    padding-left: 0px;\n    padding-bottom: 10px;\n    display: flex;\n    flex-wrap: wrap;\n    flex-direction: row; }\n    .postpreview .taglist li {\n      display: flex;\n      height: 35px;\n      border-radius: 1px;\n      padding-right: 15px;\n      padding-left: 15px;\n      margin: 10px 13px 0px 0;\n      background: #ebe9e7;\n      align-items: center;\n      justify-content: center;\n      font-family: futura-pt, sans-serif;\n      font-weight: 300;\n      font-size: 18px; }\n    .postpreview .taglist a {\n      text-decoration: none;\n      color: black; }\n    .postpreview .taglist li:hover {\n      background: #e0e0e0; }\n  .postpreview a {\n    text-decoration: underline;\n    color: blue; }\n\n.time-container {\n  padding-top: 1px;\n  display: flex;\n  align-items: left; }\n  .time-container .time-text {\n    text-align: center;\n    padding-left: 4px;\n    font-family: 'Assistant Regular';\n    color: #828282; }\n";
 styleInject(css);
 
 var Clock = (function () {
@@ -4779,4 +4779,386 @@ var PostView = function PostView(_ref2) {
   );
 };
 
-export { PostView as Template1 };
+var css$1 = ".Time-module_pageSpacing__2LCRk {\n  margin-top: 48px;\n  margin-right: auto;\n  margin-left: auto;\n  width: 80%; }\n\n.Time-module_headerFontSize__3oTCz {\n  font-size: 36px;\n  font-weight: bold; }\n  @media (max-width: 760px) {\n    .Time-module_headerFontSize__3oTCz {\n      font-size: 28px; } }\n\n.Time-module_subHeaderFontSize__2gMq7 {\n  font-size: 32px;\n  font-weight: bold; }\n  @media (max-width: 760px) {\n    .Time-module_subHeaderFontSize__2gMq7 {\n      font-size: 24px; } }\n\n.Time-module_bodyFontSize__2au4l {\n  font-family: \"Assistant Regular\";\n  font-size: 20px; }\n  @media (max-width: 760px) {\n    .Time-module_bodyFontSize__2au4l {\n      font-size: 18px; } }\n\n.Time-module_descFontSize__2uhdB {\n  font-size: 18px; }\n  @media (max-width: 760px) {\n    .Time-module_descFontSize__2uhdB {\n      font-size: 16px; } }\n\nhtml {\n  margin: 0;\n  padding: 0;\n  overflow-x: hidden;\n  font-family: futura-pt, sans-serif; }\n\nbody {\n  min-height: 100vh;\n  position: relative;\n  margin: 0;\n  padding-bottom: 8rem; }\n\n@font-face {\n  font-family: \"Assistant Regular\";\n  src: url(\"/fonts/Assistant-Regular.ttf\") format(\"truetype\");\n  font-weight: normal;\n  font-style: normal; }\n\n.Time-module_Time__text__3QppU {\n  color: #767676;\n  font-size: 12px;\n  font-family: rubik; }\n";
+var styles = { "pageSpacing": "Time-module_pageSpacing__2LCRk", "headerFontSize": "Time-module_headerFontSize__3oTCz", "subHeaderFontSize": "Time-module_subHeaderFontSize__2gMq7", "bodyFontSize": "Time-module_bodyFontSize__2au4l", "descFontSize": "Time-module_descFontSize__2uhdB", "Time__text": "Time-module_Time__text__3QppU" };
+styleInject(css$1);
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var Time$1 = function (_React$Component) {
+  _inherits(Time, _React$Component);
+
+  function Time() {
+    _classCallCheck(this, Time);
+
+    return _possibleConstructorReturn(this, (Time.__proto__ || Object.getPrototypeOf(Time)).apply(this, arguments));
+  }
+
+  _createClass(Time, [{
+    key: 'render',
+    value: function render() {
+      var date = this.props.date;
+
+      var m = moment(date);
+      var now = moment();
+      var daysSince = m.diff(now, 'days');
+      var formattedDate = React.createElement('div', null);
+
+      if (daysSince > -1) {
+        formattedDate = 'A couple of hours ago...';
+      } else if (daysSince > -7) {
+        formattedDate = -daysSince + ' ' + (daysSince === -1 ? 'day' : 'days') + ' ago';
+      } else if (daysSince <= -7) {
+        formattedDate = m.format('MMMM Do, YYYY');
+      }
+
+      return React.createElement(
+        'div',
+        { className: styles.Time__text },
+        formattedDate
+      );
+    }
+  }]);
+
+  return Time;
+}(React.Component);
+
+var Content = function Content(_ref2) {
+  var content = _ref2.content,
+      className = _ref2.className;
+  return React.createElement(
+    'div',
+    { className: className },
+    content
+  );
+};
+
+var css$2 = ".TagList-module_pageSpacing__1BaAE {\n  margin-top: 48px;\n  margin-right: auto;\n  margin-left: auto;\n  width: 80%; }\n\n.TagList-module_headerFontSize__iT86D {\n  font-size: 36px;\n  font-weight: bold; }\n  @media (max-width: 760px) {\n    .TagList-module_headerFontSize__iT86D {\n      font-size: 28px; } }\n\n.TagList-module_subHeaderFontSize__3KX66 {\n  font-size: 32px;\n  font-weight: bold; }\n  @media (max-width: 760px) {\n    .TagList-module_subHeaderFontSize__3KX66 {\n      font-size: 24px; } }\n\n.TagList-module_bodyFontSize__12ScS {\n  font-family: \"Assistant Regular\";\n  font-size: 20px; }\n  @media (max-width: 760px) {\n    .TagList-module_bodyFontSize__12ScS {\n      font-size: 18px; } }\n\n.TagList-module_descFontSize__2jH0D {\n  font-size: 18px; }\n  @media (max-width: 760px) {\n    .TagList-module_descFontSize__2jH0D {\n      font-size: 16px; } }\n\nhtml {\n  margin: 0;\n  padding: 0;\n  overflow-x: hidden;\n  font-family: futura-pt, sans-serif; }\n\nbody {\n  min-height: 100vh;\n  position: relative;\n  margin: 0;\n  padding-bottom: 8rem; }\n\n@font-face {\n  font-family: \"Assistant Regular\";\n  src: url(\"/fonts/Assistant-Regular.ttf\") format(\"truetype\");\n  font-weight: normal;\n  font-style: normal; }\n\n.TagList-module_Index__tags__1syrZ {\n  margin-bottom: 24px; }\n\n.TagList-module_Index__tags__title__1_KIn {\n  font-family: futura-pt, sans-serif;\n  font-weight: 500;\n  font-size: 16px;\n  color: #767676; }\n\n.TagList-module_Index__tags__list__2xhre {\n  list-style: none;\n  padding-left: 0px;\n  display: flex;\n  flex-wrap: wrap;\n  flex-direction: row; }\n  .TagList-module_Index__tags__list__2xhre li {\n    display: flex;\n    height: 35px;\n    border-radius: 1px;\n    width: -webkit-max-content;\n    width: -moz-max-content;\n    width: max-content;\n    padding-right: 10px;\n    padding-left: 10px;\n    margin: 0px 0.5rem 0.5rem 0;\n    background: #ebe9e7;\n    align-items: center;\n    justify-content: center;\n    font-family: futura-pt, sans-serif;\n    font-weight: 300;\n    font-size: 13px;\n    text-transform: uppercase;\n    color: #000; }\n  .TagList-module_Index__tags__list__2xhre a {\n    text-decoration: none;\n    color: black; }\n  .TagList-module_Index__tags__list__2xhre li:hover {\n    background: #e0e0e0; }\n";
+var styles$1 = { "pageSpacing": "TagList-module_pageSpacing__1BaAE", "headerFontSize": "TagList-module_headerFontSize__iT86D", "subHeaderFontSize": "TagList-module_subHeaderFontSize__3KX66", "bodyFontSize": "TagList-module_bodyFontSize__12ScS", "descFontSize": "TagList-module_descFontSize__2jH0D", "Index__tags": "TagList-module_Index__tags__1syrZ", "Index__tags__title": "TagList-module_Index__tags__title__1_KIn", "Index__tags__list": "TagList-module_Index__tags__list__2xhre" };
+styleInject(css$2);
+
+var _createClass$1 = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck$1(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn$1(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits$1(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var TagList = function (_React$Component) {
+  _inherits$1(TagList, _React$Component);
+
+  function TagList() {
+    _classCallCheck$1(this, TagList);
+
+    return _possibleConstructorReturn$1(this, (TagList.__proto__ || Object.getPrototypeOf(TagList)).apply(this, arguments));
+  }
+
+  _createClass$1(TagList, [{
+    key: 'render',
+    value: function render() {
+      var _props = this.props,
+          tags = _props.tags,
+          title = _props.title,
+          Link = _props.Link,
+          isPreview = _props.isPreview;
+
+      return React.createElement(
+        'div',
+        { className: styles$1.Index__tags },
+        title && React.createElement(
+          'div',
+          { className: styles$1.Index__tags__title },
+          title
+        ),
+        React.createElement(
+          'ul',
+          { className: styles$1.Index__tags__list },
+          tags.map(function (tag) {
+            return isPreview ? React.createElement(
+              'span',
+              { key: tag },
+              React.createElement(
+                'li',
+                null,
+                tag
+              )
+            ) : React.createElement(
+              Link,
+              { key: tag.slug, to: tag.slug },
+              React.createElement(
+                'li',
+                null,
+                tag.name
+              )
+            );
+          })
+        )
+      );
+    }
+  }]);
+
+  return TagList;
+}(React.Component);
+
+var css$3 = ".MorePosts-module_pageSpacing__2YiW6 {\n  margin-top: 48px;\n  margin-right: auto;\n  margin-left: auto;\n  width: 80%; }\n\n.MorePosts-module_headerFontSize__3PX6i {\n  font-size: 36px;\n  font-weight: bold; }\n  @media (max-width: 760px) {\n    .MorePosts-module_headerFontSize__3PX6i {\n      font-size: 28px; } }\n\n.MorePosts-module_subHeaderFontSize__1ur40 {\n  font-size: 32px;\n  font-weight: bold; }\n  @media (max-width: 760px) {\n    .MorePosts-module_subHeaderFontSize__1ur40 {\n      font-size: 24px; } }\n\n.MorePosts-module_bodyFontSize__HbH_- {\n  font-family: \"Assistant Regular\";\n  font-size: 20px; }\n  @media (max-width: 760px) {\n    .MorePosts-module_bodyFontSize__HbH_- {\n      font-size: 18px; } }\n\n.MorePosts-module_descFontSize__3rKuf {\n  font-size: 18px; }\n  @media (max-width: 760px) {\n    .MorePosts-module_descFontSize__3rKuf {\n      font-size: 16px; } }\n\nhtml {\n  margin: 0;\n  padding: 0;\n  overflow-x: hidden;\n  font-family: futura-pt, sans-serif; }\n\nbody {\n  min-height: 100vh;\n  position: relative;\n  margin: 0;\n  padding-bottom: 8rem; }\n\n@font-face {\n  font-family: \"Assistant Regular\";\n  src: url(\"/fonts/Assistant-Regular.ttf\") format(\"truetype\");\n  font-weight: normal;\n  font-style: normal; }\n\n.MorePosts-module_MostPosts__header__text__2BXZR {\n  font-family: futura-pt, sans-serif;\n  font-size: 16px;\n  padding-top: 10px;\n  color: #767676;\n  text-transform: uppercase; }\n\n.MorePosts-module_MorePosts__container__13x-9 {\n  padding-top: 50px;\n  display: flex;\n  flex-direction: row;\n  justify-content: space-around;\n  min-width: 700px;\n  margin-right: auto;\n  margin-left: auto; }\n  @media (max-width: 1000px) {\n    .MorePosts-module_MorePosts__container__13x-9 {\n      min-width: 320px; } }\n  @media (max-width: 760px) {\n    .MorePosts-module_MorePosts__container__13x-9 {\n      flex-direction: column;\n      align-items: center; } }\n\n.MorePosts-module_Post__x2Wz7 {\n  width: 200px;\n  margin-bottom: 56px;\n  display: flex;\n  flex-direction: column;\n  align-items: center; }\n  .MorePosts-module_Post__x2Wz7 a {\n    text-decoration: none;\n    color: #000; }\n  .MorePosts-module_Post__x2Wz7 a:hover * {\n    color: #767676; }\n\n.MorePosts-module_Post__title__1k4oi {\n  font-family: futura-pt, sans-serif;\n  font-size: 22px;\n  font-weight: 700;\n  padding-top: 8px;\n  margin-bottom: 12px; }\n\n.MorePosts-module_Post__excerpt__Zojsy {\n  font-family: rubik;\n  font-size: 14px;\n  font-weight: 300; }\n";
+var styles$2 = { "pageSpacing": "MorePosts-module_pageSpacing__2YiW6", "headerFontSize": "MorePosts-module_headerFontSize__3PX6i", "subHeaderFontSize": "MorePosts-module_subHeaderFontSize__1ur40", "bodyFontSize": "MorePosts-module_bodyFontSize__HbH_-", "descFontSize": "MorePosts-module_descFontSize__3rKuf", "MostPosts__header__text": "MorePosts-module_MostPosts__header__text__2BXZR", "MorePosts__container": "MorePosts-module_MorePosts__container__13x-9", "Post": "MorePosts-module_Post__x2Wz7", "Post__title": "MorePosts-module_Post__title__1k4oi", "Post__excerpt": "MorePosts-module_Post__excerpt__Zojsy" };
+styleInject(css$3);
+
+var MorePosts = function MorePosts(_ref) {
+  var posts = _ref.posts,
+      Link = _ref.Link,
+      Img = _ref.Img;
+  return React.createElement(
+    'div',
+    { className: styles$2.MorePosts },
+    React.createElement(
+      'div',
+      { className: styles$2.MorePosts__header },
+      React.createElement(
+        'div',
+        { className: styles$2.MostPosts__header__text },
+        'More Like This'
+      )
+    ),
+    React.createElement(
+      'div',
+      { className: styles$2.MorePosts__container },
+      posts.map(function (_ref2) {
+        var slug = _ref2.slug,
+            title = _ref2.title,
+            excerpt = _ref2.excerpt,
+            thumbnail = _ref2.thumbnail;
+        return React.createElement(
+          'div',
+          { className: styles$2.Post, key: slug },
+          React.createElement(
+            Link,
+            { to: slug },
+            thumbnail ? React.createElement(Img, { alt: title, fixed: thumbnail.childImageSharp.fixed }) : React.createElement('div', { style: { height: 150, width: 200 } }),
+            React.createElement(
+              'div',
+              { className: styles$2.Post__title },
+              ' ',
+              title
+            ),
+            React.createElement(
+              'div',
+              { className: styles$2.Post__excerpt },
+              ' ',
+              excerpt
+            )
+          )
+        );
+      })
+    )
+  );
+};
+
+var css$4 = "@import url(/css/quill.core.css);\n.blog-post-module_pageSpacing__31A8E {\n  margin-top: 48px;\n  margin-right: auto;\n  margin-left: auto;\n  width: 80%; }\n\n.blog-post-module_headerFontSize__hYibW {\n  font-size: 36px;\n  font-weight: bold; }\n  @media (max-width: 760px) {\n    .blog-post-module_headerFontSize__hYibW {\n      font-size: 28px; } }\n\n.blog-post-module_subHeaderFontSize__oOOvI {\n  font-size: 32px;\n  font-weight: bold; }\n  @media (max-width: 760px) {\n    .blog-post-module_subHeaderFontSize__oOOvI {\n      font-size: 24px; } }\n\n.blog-post-module_bodyFontSize__3AVk8 {\n  font-family: \"Assistant Regular\";\n  font-size: 20px; }\n  @media (max-width: 760px) {\n    .blog-post-module_bodyFontSize__3AVk8 {\n      font-size: 18px; } }\n\n.blog-post-module_descFontSize__2i0w7 {\n  font-size: 18px; }\n  @media (max-width: 760px) {\n    .blog-post-module_descFontSize__2i0w7 {\n      font-size: 16px; } }\n\nhtml {\n  margin: 0;\n  padding: 0;\n  overflow-x: hidden;\n  font-family: futura-pt, sans-serif; }\n\nbody {\n  min-height: 100vh;\n  position: relative;\n  margin: 0;\n  padding-bottom: 8rem; }\n\n@font-face {\n  font-family: \"Assistant Regular\";\n  src: url(\"/fonts/Assistant-Regular.ttf\") format(\"truetype\");\n  font-weight: normal;\n  font-style: normal; }\n\n.blog-post-module_bodytext__20Rt8 {\n  font-family: rubik;\n  font-size: 20px;\n  font-weight: 300;\n  line-height: 30px;\n  display: flex;\n  flex-direction: column; }\n  .blog-post-module_bodytext__20Rt8 code {\n    font-size: 14px; }\n  @media (max-width: 800px) {\n    .blog-post-module_bodytext__20Rt8 {\n      margin-top: 20px;\n      font-size: 18px; } }\n\n.blog-post-module_ql-video__1ciNc {\n  height: 30vw; }\n\n.blog-post-module_BlogPost__1rv94 {\n  width: 55%;\n  margin-top: 84px;\n  margin-right: auto;\n  margin-left: auto; }\n  @media (max-width: 1000px) {\n    .blog-post-module_BlogPost__1rv94 {\n      width: 80%; } }\n  @media (max-width: 800px) {\n    .blog-post-module_BlogPost__1rv94 {\n      width: 90%; } }\n\n.blog-post-module_BlogPost__progressbar__3-4gn {\n  position: fixed;\n  bottom: 0;\n  left: 0;\n  height: 6px;\n  background: #333;\n  border-radius: 2px;\n  z-index: 1; }\n\n.blog-post-module_BlogPost__title__3xMqd {\n  font-family: futura-pt, sans-serif;\n  font-size: 45px;\n  font-weight: 300;\n  color: #000;\n  margin-bottom: 24px; }\n\n.blog-post-module_BlogPost__authorInfo__20-9p {\n  padding-left: 5px;\n  display: flex;\n  flex-direction: row;\n  justify-content: flex-start;\n  align-content: center;\n  margin-top: 18px;\n  margin-bottom: 18px; }\n\n.blog-post-module_BlogPost__authorLink__3Pypf {\n  flex-direction: row;\n  justify-content: flex-start;\n  align-content: center; }\n\n.blog-post-module_authorInfo__image__1pNQL {\n  float: left;\n  margin-right: 10px;\n  height: 50px;\n  width: 50px;\n  border-radius: 40px; }\n\n.blog-post-module_authorInfo__text__2Ecqj {\n  margin-left: 6px; }\n\n.blog-post-module_authorInfo__text__name__1BMwk {\n  font-family: rubik;\n  font-weight: 300;\n  font-size: 16px;\n  padding-top: 2px;\n  padding-bottom: 2px; }\n\n.blog-post-module_BlogPost__description__386-i {\n  margin-top: 24px;\n  margin-bottom: 24px;\n  font-family: rubik;\n  font-size: 18px;\n  line-height: 23px;\n  font-style: italic;\n  color: #767676; }\n  @media (max-width: 800px) {\n    .blog-post-module_BlogPost__description__386-i {\n      margin-top: 20px;\n      font-size: 18px; }\n      .blog-post-module_BlogPost__description__386-i img {\n        height: auto;\n        display: block;\n        margin: auto;\n        max-width: 500px; } }\n    @media (max-width: 800px) and (max-width: 600px) {\n      .blog-post-module_BlogPost__description__386-i img {\n        max-width: 300px; } }\n  @media (max-width: 800px) {\n      .blog-post-module_BlogPost__description__386-i code {\n        font-size: 14px; } }\n  .blog-post-module_BlogPost__description__386-i .blog-post-module_taglist__16ri0 {\n    list-style: none;\n    padding-left: 0px;\n    padding-bottom: 10px;\n    display: flex;\n    flex-wrap: wrap;\n    flex-direction: row; }\n    .blog-post-module_BlogPost__description__386-i .blog-post-module_taglist__16ri0 li {\n      display: flex;\n      height: 35px;\n      border-radius: 1px;\n      padding-right: 15px;\n      padding-left: 15px;\n      margin: 10px 13px 0px 0;\n      background: #ebe9e7;\n      align-items: center;\n      justify-content: center;\n      font-family: futura-pt, sans-serif;\n      font-weight: 300;\n      font-size: 18px; }\n    .blog-post-module_BlogPost__description__386-i .blog-post-module_taglist__16ri0 a {\n      text-decoration: none;\n      color: black; }\n    .blog-post-module_BlogPost__description__386-i .blog-post-module_taglist__16ri0 li:hover {\n      background: #e0e0e0; }\n\n.blog-post-module_BlogPost__content__2iPp7 {\n  margin-top: 48px;\n  font-family: rubik; }\n\n.blog-post-module_BlogPost__taglistContainer__2d5tM {\n  margin-top: 56px; }\n\n.blog-post-module_AuthorPage__header__1-Jqb {\n  display: flex;\n  flex-direction: row;\n  font-size: 24px;\n  margin-top: 48px;\n  margin-bottom: 48px; }\n  @media (max-width: 760px) {\n    .blog-post-module_AuthorPage__header__1-Jqb {\n      flex-direction: column;\n      justify-content: flex-start;\n      align-items: center; } }\n\n.blog-post-module_AuthorPage__header__imageContainer__1sMFT {\n  margin-right: 48px;\n  display: inline; }\n  @media (max-width: 760px) {\n    .blog-post-module_AuthorPage__header__imageContainer__1sMFT {\n      margin-right: 0px; } }\n\n.blog-post-module_AuthorPage__header__image__1UnPN {\n  border-radius: 100px; }\n\n.blog-post-module_AuthorPage__header__imageMobile__1Lz5D {\n  border-radius: 80px; }\n\n.blog-post-module_AuthorPage__header__text__22OSY {\n  display: flex;\n  flex-direction: column;\n  justify-content: flex-start;\n  width: 80%; }\n  @media (max-width: 760px) {\n    .blog-post-module_AuthorPage__header__text__22OSY {\n      align-items: center;\n      width: 100%; } }\n\n.blog-post-module_AuthorPage__header__text__name__1wzc1 {\n  font-family: futura-pt, sans-serif;\n  color: #000;\n  font-size: 22px;\n  line-height: 31px;\n  margin-bottom: 16px; }\n  @media (max-width: 760px) {\n    .blog-post-module_AuthorPage__header__text__name__1wzc1 {\n      color: #767676;\n      font-weight: 600;\n      font-size: 18px; } }\n\n.blog-post-module_AuthorPage__header__text__bio__1Bhrj {\n  font-family: rubik;\n  color: #000;\n  font-size: 14px;\n  line-height: 23px; }\n  @media (max-width: 760px) {\n    .blog-post-module_AuthorPage__header__text__bio__1Bhrj {\n      color: #767676;\n      text-align: center; } }\n\n.blog-post-module_Article__footer__3nNjp {\n  width: 80%;\n  margin-right: auto;\n  margin-left: auto; }\n";
+var styles$3 = { "pageSpacing": "blog-post-module_pageSpacing__31A8E", "headerFontSize": "blog-post-module_headerFontSize__hYibW", "subHeaderFontSize": "blog-post-module_subHeaderFontSize__oOOvI", "bodyFontSize": "blog-post-module_bodyFontSize__3AVk8", "descFontSize": "blog-post-module_descFontSize__2i0w7", "bodytext": "blog-post-module_bodytext__20Rt8", "ql-video": "blog-post-module_ql-video__1ciNc", "BlogPost": "blog-post-module_BlogPost__1rv94", "BlogPost__progressbar": "blog-post-module_BlogPost__progressbar__3-4gn", "BlogPost__title": "blog-post-module_BlogPost__title__3xMqd", "BlogPost__authorInfo": "blog-post-module_BlogPost__authorInfo__20-9p", "BlogPost__authorLink": "blog-post-module_BlogPost__authorLink__3Pypf", "authorInfo__image": "blog-post-module_authorInfo__image__1pNQL", "authorInfo__text": "blog-post-module_authorInfo__text__2Ecqj", "authorInfo__text__name": "blog-post-module_authorInfo__text__name__1BMwk", "BlogPost__description": "blog-post-module_BlogPost__description__386-i", "taglist": "blog-post-module_taglist__16ri0", "BlogPost__content": "blog-post-module_BlogPost__content__2iPp7", "BlogPost__taglistContainer": "blog-post-module_BlogPost__taglistContainer__2d5tM", "AuthorPage__header": "blog-post-module_AuthorPage__header__1-Jqb", "AuthorPage__header__imageContainer": "blog-post-module_AuthorPage__header__imageContainer__1sMFT", "AuthorPage__header__image": "blog-post-module_AuthorPage__header__image__1UnPN", "AuthorPage__header__imageMobile": "blog-post-module_AuthorPage__header__imageMobile__1Lz5D", "AuthorPage__header__text": "blog-post-module_AuthorPage__header__text__22OSY", "AuthorPage__header__text__name": "blog-post-module_AuthorPage__header__text__name__1wzc1", "AuthorPage__header__text__bio": "blog-post-module_AuthorPage__header__text__bio__1Bhrj", "Article__footer": "blog-post-module_Article__footer__3nNjp" };
+styleInject(css$4);
+
+var _createClass$2 = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck$2(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn$2(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits$2(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var BlogPostTemplate = function (_Component) {
+  _inherits$2(BlogPostTemplate, _Component);
+
+  function BlogPostTemplate(props) {
+    _classCallCheck$2(this, BlogPostTemplate);
+
+    var _this = _possibleConstructorReturn$2(this, (BlogPostTemplate.__proto__ || Object.getPrototypeOf(BlogPostTemplate)).call(this, props));
+
+    _this.state = { scrollHeight: 0 };
+    _this.handleScroll = _this.handleScroll.bind(_this);
+    return _this;
+  }
+
+  _createClass$2(BlogPostTemplate, [{
+    key: 'componentDidMount',
+    value: function componentDidMount() {
+      window.addEventListener('scroll', this.handleScroll);
+    }
+  }, {
+    key: 'componentWillUnmount',
+    value: function componentWillUnmount() {
+      window.removeEventListener('scroll', this.handleScroll);
+    }
+  }, {
+    key: 'handleScroll',
+    value: function handleScroll() {
+      this.setState({
+        scrollHeight: window.scrollY / (document.getElementById('article-container').scrollHeight - window.innerHeight)
+      });
+    }
+  }, {
+    key: 'render',
+    value: function render() {
+      var _props = this.props,
+          htmlBody = _props.htmlBody,
+          contentComponent = _props.contentComponent,
+          helmet = _props.helmet,
+          coverPhoto = _props.coverPhoto,
+          description = _props.description,
+          _props$tags = _props.tags,
+          tags = _props$tags === undefined ? [] : _props$tags,
+          title = _props.title,
+          publishDate = _props.publishDate,
+          author = _props.author,
+          _props$morePosts = _props.morePosts,
+          morePosts = _props$morePosts === undefined ? [] : _props$morePosts,
+          Link = _props.Link,
+          Img = _props.Img,
+          isPreview = _props.isPreview;
+      var name = author.name,
+          headshot = author.headshot,
+          bio = author.bio;
+
+      var PostContent = contentComponent || Content;
+
+      // Construct progress bar
+      var Progressbar = React.createElement('div', {
+        className: styles$3.BlogPost__progressbar,
+        style: {
+          width: this.state.scrollHeight < 1 ? 'calc(100% * ' + this.state.scrollHeight + ' ' : 0
+        }
+      });
+      return React.createElement(
+        'section',
+        { id: 'article-container', className: styles$3.BlogPost },
+        Progressbar,
+        helmet || '',
+        React.createElement(
+          'div',
+          { className: styles$3.BlogPost__title },
+          title
+        ),
+        React.createElement(
+          'div',
+          { className: styles$3.BlogPost__authorInfo },
+          isPreview ? React.createElement(
+            'span',
+            { style: { textDecoration: 'none' }, to: author.slug },
+            React.createElement('img', {
+              className: styles$3.authorInfo__image,
+              alt: author.name + ' headshot',
+              src: author.headshotUri
+            })
+          ) : React.createElement(
+            Link,
+            { style: { textDecoration: 'none' }, to: author.slug },
+            React.createElement(Img, {
+              className: styles$3.authorInfo__image,
+              alt: author.name + ' headshot',
+              fixed: author.headshot.childImageSharp.small
+            })
+          ),
+          React.createElement(
+            'div',
+            { className: styles$3.authorInfo__text },
+            isPreview ? React.createElement(
+              'span',
+              { style: { textDecoration: 'none', color: 'black' } },
+              React.createElement(
+                'div',
+                { className: styles$3.authorInfo__text__name },
+                author.name
+              )
+            ) : React.createElement(
+              Link,
+              {
+                style: { textDecoration: 'none', color: 'black' },
+                to: author.slug
+              },
+              React.createElement(
+                'div',
+                { className: styles$3.authorInfo__text__name },
+                author.name
+              )
+            ),
+            React.createElement(Time$1, { size: 'large', date: publishDate })
+          )
+        ),
+        React.createElement(PostContent, {
+          className: styles$3.BlogPost__description,
+          content: description
+        }),
+        coverPhoto && !isPreview && React.createElement(Img, { fluid: coverPhoto.childImageSharp.fluid, alt: 'Cover Photo' }),
+        coverPhoto && isPreview && React.createElement('img', { src: coverPhoto, alt: 'Cover Photo' }),
+        React.createElement(PostContent, {
+          className: styles$3.BlogPost__content + ' ' + styles$3.bodytext + ' ql-editor ',
+          content: htmlBody
+        }),
+        tags && tags.length > 0 && React.createElement(
+          'div',
+          { className: styles$3.BlogPost__taglistContainer },
+          React.createElement(TagList, { tags: tags, isPreview: isPreview, Link: Link })
+        ),
+        React.createElement(
+          'div',
+          { className: styles$3.Article__footer },
+          React.createElement(
+            'div',
+            { className: styles$3.AuthorPage__header },
+            React.createElement(
+              'div',
+              { className: styles$3.AuthorPage__header__imageContainer },
+              isPreview ? React.createElement('img', {
+                className: styles$3.AuthorPage__header__image,
+                alt: name,
+                src: author.headshotUri
+              }) : React.createElement(Img, {
+                className: styles$3.AuthorPage__header__image,
+                alt: name,
+                fixed: headshot.childImageSharp.large
+              })
+            ),
+            React.createElement(
+              'div',
+              { className: styles$3.AuthorPage__header__text },
+              React.createElement(
+                'div',
+                { className: styles$3.AuthorPage__header__text__name },
+                name
+              ),
+              React.createElement(
+                'div',
+                { className: styles$3.AuthorPage__header__text__bio },
+                bio
+              )
+            )
+          )
+        ),
+        React.createElement('hr', null),
+        morePosts && morePosts.length > 0 && React.createElement(MorePosts, { posts: morePosts, Link: Link, Img: Img })
+      );
+    }
+  }]);
+
+  return BlogPostTemplate;
+}(Component);
+
+var css$5 = ".postpreview {\n  width: 100%;\n  position: -webkit-sticky;\n  position: sticky;\n  top: 0;\n  height: 100vh; }\n  .postpreview .article {\n    display: flex;\n    flex-direction: column; }\n  .postpreview #article-title {\n    font-family: futura-pt, sans-serif;\n    font-size: 45px;\n    font-weight: 300;\n    color: #333333; }\n  .postpreview .author {\n    display: flex;\n    flex-direction: row;\n    align-self: flex-start; }\n  .postpreview .authorimg {\n    align-self: flex-start;\n    margin-right: 10px;\n    height: 50px;\n    width: 50px;\n    border-radius: 40px; }\n  .postpreview img {\n    display: block;\n    margin: auto;\n    max-width: 500px; }\n  .postpreview .authorinfo {\n    padding-left: 5px;\n    display: flex;\n    flex-direction: column; }\n  .postpreview .article-authorname {\n    font-family: futura-pt, sans-serif;\n    font-size: 18px;\n    padding-top: 2px;\n    padding-bottom: 2px; }\n  .postpreview .bodytext {\n    font-family: Rubik;\n    font-size: 20px;\n    font-weight: 300;\n    line-height: 30px;\n    display: flex;\n    flex-direction: column; }\n    .postpreview .bodytext code {\n      font-size: 14px; }\n  .postpreview .ql-video {\n    height: 30vw; }\n  .postpreview .taglist {\n    list-style: none;\n    padding-left: 0px;\n    padding-bottom: 10px;\n    display: flex;\n    flex-wrap: wrap;\n    flex-direction: row; }\n    .postpreview .taglist li {\n      display: flex;\n      height: 35px;\n      border-radius: 1px;\n      padding-right: 15px;\n      padding-left: 15px;\n      margin: 10px 13px 0px 0;\n      background: #ebe9e7;\n      align-items: center;\n      justify-content: center;\n      font-family: futura-pt, sans-serif;\n      font-weight: 300;\n      font-size: 18px; }\n    .postpreview .taglist a {\n      text-decoration: none;\n      color: black; }\n    .postpreview .taglist li:hover {\n      background: #e0e0e0; }\n  .postpreview a {\n    text-decoration: underline;\n    color: blue; }\n\n.time-container {\n  padding-top: 1px;\n  display: flex;\n  align-items: left; }\n  .time-container .time-text {\n    text-align: center;\n    padding-left: 4px;\n    font-family: 'Assistant Regular';\n    color: #828282; }\n";
+styleInject(css$5);
+
+var InnerHTML = function InnerHTML(_ref) {
+  var htmlBody = _ref.htmlBody;
+  return React.createElement('div', {
+    className: 'bodytext ql-editor',
+    dangerouslySetInnerHTML: { __html: htmlBody }
+  });
+};
+
+export { PostView as Template1, InnerHTML as InnerHTMLonly, BlogPostTemplate as Template1Canonical };
