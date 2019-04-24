@@ -393,6 +393,7 @@
 .ql-editor .ql-video {
   display: block;
   max-width: 100%;
+  height: 30vw;
 }
 
 .ql-editor .ql-video.ql-align-center {
