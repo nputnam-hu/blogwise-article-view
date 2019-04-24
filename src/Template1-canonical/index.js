@@ -7,6 +7,7 @@ import TagList from './TagList'
 import MorePosts from './MorePosts'
 import styles from './blog-post.module.sass'
 import './css/quill.core.css'
+import './styles/global.sass'
 
 class BlogPostTemplate extends Component {
   constructor(props) {
