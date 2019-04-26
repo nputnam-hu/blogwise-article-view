@@ -61,7 +61,12 @@ class BlogPostTemplate extends Component {
       />
     )
     return (
-      <section id="article-container" className={styles.BlogPost}>
+      <section
+        id="article-container"
+        className={`${styles.BlogPost} ${
+          isPreview ? styles.BlogPost__preview : ''
+        }`}
+      >
         {Progressbar}
         {helmet || ''}
         {/* Blog Post Info */}

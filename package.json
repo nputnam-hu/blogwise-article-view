@@ -28,9 +28,6 @@
     "type": "git",
     "url": "git+https://github.com/nputnam-hu/blogwise-article-view.git"
   },
-  "publishConfig": {
-    "access": "private"
-  },
   "keywords": [
     "rollup",
     "react",
@@ -41,7 +38,7 @@
     "example rollup react component"
   ],
   "author": "blogwise",
-  "license": "MIT",
+  "license": "UNLICENSED",
   "bugs": {
     "url": "git+https://github.com/nputnam-hu/blogwise-article-view/issues"
   },
