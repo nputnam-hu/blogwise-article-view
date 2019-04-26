@@ -12,11 +12,12 @@ import './styles/global.sass'
 class BlogPostTemplate extends Component {
   constructor(props) {
     super(props)
-    this.state = { scrollHeight: 0 }
+    this.state = { scrollHeight: 0, pageUrl: '' }
     this.handleScroll = this.handleScroll.bind(this)
   }
   componentDidMount() {
     window.addEventListener('scroll', this.handleScroll)
+    this.setState({ pageUrl: window.location.href })
   }
   componentWillUnmount() {
     window.removeEventListener('scroll', this.handleScroll)
@@ -44,9 +45,18 @@ class BlogPostTemplate extends Component {
       Link,
       Img,
       isPreview,
+      EmailIcon,
+      FacebookIcon,
+      LinkedinIcon,
+      TwitterIcon,
+      EmailShareButton,
+      FacebookShareButton,
+      LinkedinShareButton,
+      TwitterShareButton,
     } = this.props
     const { name, headshot, bio } = author
     const PostContent = contentComponent || Content
+    const { pageUrl } = this.state
 
     // Construct progress bar
     const Progressbar = (
@@ -131,6 +141,22 @@ class BlogPostTemplate extends Component {
         )}
         {/* Article Footer */}
         <div className={styles.Article__footer}>
+          {!isPreview && (
+            <div className={styles.AuthorPage__sharebuttons}>
+              <FacebookShareButton url={pageUrl} quote={title}>
+                <FacebookIcon size={32} round />
+              </FacebookShareButton>
+              <TwitterShareButton url={pageUrl} title={title}>
+                <TwitterIcon size={32} round />
+              </TwitterShareButton>
+              <EmailShareButton url={pageUrl} subject={title}>
+                <EmailIcon size={32} round />
+              </EmailShareButton>
+              <LinkedinShareButton url={pageUrl} title={title}>
+                <LinkedinIcon size={32} round />
+              </LinkedinShareButton>
+            </div>
+          )}
           <div className={styles.AuthorPage__header}>
             <div className={styles.AuthorPage__header__imageContainer}>
               {isPreview ? (
@@ -162,7 +188,7 @@ class BlogPostTemplate extends Component {
             </div>
           </div>
         </div>
-        <hr />
+        {!isPreview && <hr />}
         {morePosts && morePosts.length > 0 && (
           <MorePosts posts={morePosts} Link={Link} Img={Img} />
         )}
