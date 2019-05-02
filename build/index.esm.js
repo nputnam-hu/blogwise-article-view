@@ -5116,7 +5116,7 @@ var BlogPostTemplate = function (_Component) {
           content: description
         }),
         coverPhoto && !isPreview && React.createElement(Img, { fluid: coverPhoto.childImageSharp.fluid, alt: 'Cover Photo' }),
-        coverPhoto && isPreview && React.createElement('img', { src: coverPhoto, alt: 'Cover Photo' }),
+        coverPhoto && isPreview && React.createElement('img', { style: { maxWidth: 450 }, src: coverPhoto, alt: 'Cover Photo' }),
         React.createElement(PostContent, {
           className: styles$3.BlogPost__content + ' ' + styles$3.bodytext + ' ql-editor',
           content: htmlBody

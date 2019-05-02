@@ -127,7 +127,9 @@ class BlogPostTemplate extends Component {
         {coverPhoto && !isPreview && (
           <Img fluid={coverPhoto.childImageSharp.fluid} alt="Cover Photo" />
         )}
-        {coverPhoto && isPreview && <img src={coverPhoto} alt="Cover Photo" />}
+        {coverPhoto && isPreview && (
+          <img style={{ maxWidth: 450 }} src={coverPhoto} alt="Cover Photo" />
+        )}
         {/* Post Content Section */}
         <PostContent
           className={`${styles.BlogPost__content} ${styles.bodytext} ql-editor`}
