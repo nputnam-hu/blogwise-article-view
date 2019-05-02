@@ -128,7 +128,11 @@ class BlogPostTemplate extends Component {
           <Img fluid={coverPhoto.childImageSharp.fluid} alt="Cover Photo" />
         )}
         {coverPhoto && isPreview && (
-          <img style={{ maxWidth: 450 }} src={coverPhoto} alt="Cover Photo" />
+          <img
+            style={{ maxWidth: '100%' }}
+            src={coverPhoto}
+            alt="Cover Photo"
+          />
         )}
         {/* Post Content Section */}
         <PostContent
