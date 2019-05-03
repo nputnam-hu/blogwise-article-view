@@ -54,7 +54,6 @@ class BlogPostTemplate extends Component {
       LinkedinShareButton,
       TwitterShareButton,
     } = this.props
-    const { name, headshot, bio } = author
     const PostContent = contentComponent || Content
     const { pageUrl } = this.state
 
@@ -173,15 +172,15 @@ class BlogPostTemplate extends Component {
                 author && (
                   <img
                     className={styles.AuthorPage__header__image}
-                    alt={name}
+                    alt={author.name}
                     src={author.headshotUri}
                   />
                 )
               ) : (
                 <Img
                   className={styles.AuthorPage__header__image}
-                  alt={name}
-                  fixed={headshot.childImageSharp.large}
+                  alt={author.name}
+                  fixed={author.headshot.childImageSharp.large}
                 />
               )}
             </div>
@@ -196,10 +195,10 @@ class BlogPostTemplate extends Component {
               {author ? (
                 <div>
                   <div className={styles.AuthorPage__header__text__name}>
-                    {name}
+                    {author.name}
                   </div>
                   <div className={styles.AuthorPage__header__text__bio}>
-                    {bio}
+                    {author.bio}
                   </div>
                 </div>
               ) : (

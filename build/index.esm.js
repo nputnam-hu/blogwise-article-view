@@ -5037,9 +5037,6 @@ var BlogPostTemplate = function (_Component) {
           FacebookShareButton = _props.FacebookShareButton,
           LinkedinShareButton = _props.LinkedinShareButton,
           TwitterShareButton = _props.TwitterShareButton;
-      var name = author.name,
-          headshot = author.headshot,
-          bio = author.bio;
 
       var PostContent = contentComponent || Content;
       var pageUrl = this.state.pageUrl;
@@ -5165,12 +5162,12 @@ var BlogPostTemplate = function (_Component) {
               { className: styles$3.AuthorPage__header__imageContainer },
               isPreview ? author && React.createElement('img', {
                 className: styles$3.AuthorPage__header__image,
-                alt: name,
+                alt: author.name,
                 src: author.headshotUri
               }) : React.createElement(Img, {
                 className: styles$3.AuthorPage__header__image,
-                alt: name,
-                fixed: headshot.childImageSharp.large
+                alt: author.name,
+                fixed: author.headshot.childImageSharp.large
               })
             ),
             React.createElement(
@@ -5182,12 +5179,12 @@ var BlogPostTemplate = function (_Component) {
                 React.createElement(
                   'div',
                   { className: styles$3.AuthorPage__header__text__name },
-                  name
+                  author.name
                 ),
                 React.createElement(
                   'div',
                   { className: styles$3.AuthorPage__header__text__bio },
-                  bio
+                  author.bio
                 )
               ) : ''
             )
