@@ -5068,7 +5068,7 @@ var BlogPostTemplate = function (_Component) {
         React.createElement(
           'div',
           { className: styles$3.BlogPost__authorInfo },
-          isPreview ? React.createElement(
+          isPreview ? author && React.createElement(
             'span',
             { style: { textDecoration: 'none' }, to: author.slug },
             React.createElement('img', {
@@ -5088,7 +5088,7 @@ var BlogPostTemplate = function (_Component) {
           React.createElement(
             'div',
             { className: styles$3.authorInfo__text },
-            isPreview ? React.createElement(
+            isPreview ? author && React.createElement(
               'span',
               { style: { textDecoration: 'none', color: 'black' } },
               React.createElement(
@@ -5163,7 +5163,7 @@ var BlogPostTemplate = function (_Component) {
             React.createElement(
               'div',
               { className: styles$3.AuthorPage__header__imageContainer },
-              isPreview ? React.createElement('img', {
+              isPreview ? author && React.createElement('img', {
                 className: styles$3.AuthorPage__header__image,
                 alt: name,
                 src: author.headshotUri
@@ -5176,16 +5176,20 @@ var BlogPostTemplate = function (_Component) {
             React.createElement(
               'div',
               { className: styles$3.AuthorPage__header__text },
-              React.createElement(
+              author ? React.createElement(
                 'div',
-                { className: styles$3.AuthorPage__header__text__name },
-                name
-              ),
-              React.createElement(
-                'div',
-                { className: styles$3.AuthorPage__header__text__bio },
-                bio
-              )
+                null,
+                React.createElement(
+                  'div',
+                  { className: styles$3.AuthorPage__header__text__name },
+                  name
+                ),
+                React.createElement(
+                  'div',
+                  { className: styles$3.AuthorPage__header__text__bio },
+                  bio
+                )
+              ) : ''
             )
           )
         ),

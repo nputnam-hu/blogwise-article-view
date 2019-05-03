@@ -83,13 +83,15 @@ class BlogPostTemplate extends Component {
         <div className={styles.BlogPost__title}>{title}</div>
         <div className={styles.BlogPost__authorInfo}>
           {isPreview ? (
-            <span style={{ textDecoration: 'none' }} to={author.slug}>
-              <img
-                className={styles.authorInfo__image}
-                alt={`${author.name} headshot`}
-                src={author.headshotUri}
-              />
-            </span>
+            author && (
+              <span style={{ textDecoration: 'none' }} to={author.slug}>
+                <img
+                  className={styles.authorInfo__image}
+                  alt={`${author.name} headshot`}
+                  src={author.headshotUri}
+                />
+              </span>
+            )
           ) : (
             <Link style={{ textDecoration: 'none' }} to={author.slug}>
               <Img
@@ -101,11 +103,13 @@ class BlogPostTemplate extends Component {
           )}
           <div className={styles.authorInfo__text}>
             {isPreview ? (
-              <span style={{ textDecoration: 'none', color: 'black' }}>
-                <div className={styles.authorInfo__text__name}>
-                  {author.name}
-                </div>
-              </span>
+              author && (
+                <span style={{ textDecoration: 'none', color: 'black' }}>
+                  <div className={styles.authorInfo__text__name}>
+                    {author.name}
+                  </div>
+                </span>
+              )
             ) : (
               <Link
                 style={{ textDecoration: 'none', color: 'black' }}
@@ -166,11 +170,13 @@ class BlogPostTemplate extends Component {
           <div className={styles.AuthorPage__header}>
             <div className={styles.AuthorPage__header__imageContainer}>
               {isPreview ? (
-                <img
-                  className={styles.AuthorPage__header__image}
-                  alt={name}
-                  src={author.headshotUri}
-                />
+                author && (
+                  <img
+                    className={styles.AuthorPage__header__image}
+                    alt={name}
+                    src={author.headshotUri}
+                  />
+                )
               ) : (
                 <Img
                   className={styles.AuthorPage__header__image}
@@ -187,10 +193,18 @@ class BlogPostTemplate extends Component {
               />
             </div> */}
             <div className={styles.AuthorPage__header__text}>
-              <div className={styles.AuthorPage__header__text__name}>
-                {name}
-              </div>
-              <div className={styles.AuthorPage__header__text__bio}>{bio}</div>
+              {author ? (
+                <div>
+                  <div className={styles.AuthorPage__header__text__name}>
+                    {name}
+                  </div>
+                  <div className={styles.AuthorPage__header__text__bio}>
+                    {bio}
+                  </div>
+                </div>
+              ) : (
+                ''
+              )}
             </div>
           </div>
         </div>
